@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int arr[4] = {2, 4, 6, 7};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    int *p = arr;
+    int *q = arr+size-1;
+    while(p<q){
+        int temp = *p;
+        *p = *q;
+        *q = temp;
+        p++;
+        q--;
+    }
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<"\t";
+    }
+    return 0;
+}
